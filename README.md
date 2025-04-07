@@ -1,5 +1,7 @@
 # nginx-spa-backend-vouch
 
+## Warning! Untested / does not work
+
 ## How to Use This Setup
 
 This configuration provides:
