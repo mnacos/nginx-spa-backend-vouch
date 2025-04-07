@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  nginx-proxy:
+    build: .
+    ports:
+      - "80:80"
+    environment:
+      - SERVICE1_API_URL=http://service1-api:8080/
+      - SERVICE1_API_KEY=your-service1-api-key
+      - SERVICE1_API_TOKEN=your-service1-token
+      - SERVICE2_API_URL=http://service2-api:8080/
+      - SERVICE2_API_KEY=your-service2-api-key
+      - SERVICE2_CUSTOM_AUTH=your-service2-auth-value
+    volumes:
+      - ./static:/usr/share/nginx/html
+    restart: unless-stopped
+
+  # Example service containers (uncomment and configure as needed)
+  # service1-api:
+  #   image: your-service1-image
+  #   expose:
+  #     - "8080"
+  
+  # service2-api:
+  #   image: your-service2-image
+  #   expose:
+  #     - "8080"
