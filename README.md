@@ -22,7 +22,7 @@ Deployment Instructions:
 Create a directory structure:
 
 ```
-Copyproject/
+project/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── docker-entrypoint.sh
@@ -38,7 +38,7 @@ Set your environment variables in the docker-compose.yml file
 Run with:
 
 ```
-bashCopydocker-compose up -d
+docker-compose up -d
 ```
 
 Customization:
